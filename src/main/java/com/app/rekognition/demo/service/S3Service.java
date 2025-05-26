@@ -39,4 +39,10 @@ public class S3Service {
         return "https://" + bucket + ".s3.amazonaws.com/" + path;
     }
 
+    public String mockUploadImage(String fileName) {
+        String path = "imagens/" + fileName;
+
+        return "https://" + bucket + ".s3.amazonaws.com/" + path;
+    }
+
 }

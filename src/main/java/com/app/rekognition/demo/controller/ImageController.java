@@ -1,9 +1,7 @@
 package com.app.rekognition.demo.controller;
 
 import com.app.rekognition.demo.DTO.ImageResponseDTO;
-import com.app.rekognition.demo.DTO.ModerationLabelDTO;
-import com.app.rekognition.demo.service.ImageService;
-import com.app.rekognition.demo.service.RekognitionService;
+import com.app.rekognition.demo.service.ImageAnalyzerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class ImageController {
 
     @Autowired
-    private ImageService service;
+    private ImageAnalyzerService service;
 
     @PostMapping
     public ResponseEntity<ImageResponseDTO> analyzeImage(@RequestParam("file") MultipartFile file) {

@@ -32,7 +32,7 @@ public class RekognitionService {
 
             DetectModerationLabelsRequest request = DetectModerationLabelsRequest.builder()
                     .image(image)
-                    .minConfidence(80F)
+                    .minConfidence(50F)
                     .build();
 
             return rekognitionClient.detectModerationLabels(request);
