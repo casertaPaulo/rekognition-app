@@ -39,7 +39,7 @@ public class ImageAnalyzerService {
 
             if (result.isEmpty()) {
                 // salva no s3 e gera um url para a imagem
-                String imageUrl = s3Service.mockUploadImage(file.getOriginalFilename());
+                String imageUrl = s3Service.uploadImage(file);
 
                 // salva a url gerada no db
                 imageService.saveImageUrl(imageUrl);
