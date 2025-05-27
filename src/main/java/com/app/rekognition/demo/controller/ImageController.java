@@ -21,7 +21,6 @@ public class ImageController {
     private ImageService imageService;
 
 
-
     @PostMapping
     public ResponseEntity<ImageResponseDTO> analyzeImage(@RequestParam("file") MultipartFile file) {
        return ResponseEntity.ok(imageAnalyzerService.analyzeImage(file));
